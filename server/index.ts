@@ -2,6 +2,8 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleAnalyze, uploadMiddleware } from "./routes/analyze";
+import { handleGetAnalysis, handleChat } from "./routes/analysis";
 
 export function createServer() {
   const app = express();
@@ -18,6 +20,11 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+
+  // Resume screening routes
+  app.post("/api/analyze", uploadMiddleware, handleAnalyze);
+  app.get("/api/analysis/:id", handleGetAnalysis);
+  app.post("/api/chat/:id", handleChat);
 
   return app;
 }
