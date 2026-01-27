@@ -1,0 +1,55 @@
+JOHN ANDERSON
+john.anderson@email.com | (555) 123-4567 | LinkedIn.com/in/johnanderson
+
+PROFESSIONAL SUMMARY
+Experienced Full-Stack Software Engineer with 5+ years of expertise in React, Node.js, and modern web technologies. Proven track record of delivering scalable applications and leading cross-functional teams.
+
+TECHNICAL SKILLS
+Languages: JavaScript, TypeScript, Python
+Frontend: React.js, Redux, TailwindCSS, HTML5, CSS3
+Backend: Node.js, Express.js, MongoDB, PostgreSQL
+Tools & Platforms: Git, Docker, AWS, CI/CD pipelines, Vite
+Methodologies: Agile, Scrum, REST API design
+
+PROFESSIONAL EXPERIENCE
+
+Senior Full-Stack Engineer | TechCorp Inc. | 2021 - Present
+- Led development of React-based dashboard used by 10,000+ daily users
+- Designed and implemented microservices architecture using Node.js and Express
+- Reduced API response time by 40% through optimization and caching strategies
+- Mentored junior developers and conducted code reviews
+- Implemented CI/CD pipelines using GitHub Actions
+
+Full-Stack Developer | StartupXYZ | 2019 - 2021
+- Built and maintained React applications with Redux state management
+- Developed RESTful APIs using Node.js and Express
+- Worked with PostgreSQL and MongoDB databases
+- Collaborated with product team to implement new features
+- Improved test coverage to 85% using Jest and React Testing Library
+
+Junior Developer | WebAgency | 2017 - 2019
+- Developed responsive web applications using React
+- Contributed to backend services using Node.js
+- Fixed bugs and optimized performance
+- Participated in code reviews and team discussions
+
+EDUCATION
+Bachelor of Science in Computer Science
+State University | 2017
+GPA: 3.8/4.0
+
+CERTIFICATIONS
+AWS Certified Solutions Architect Associate (2022)
+React Advanced Patterns Certification (2021)
+
+PROJECTS & ACHIEVEMENTS
+- Built real-time collaboration tool using WebSockets (Node.js + React)
+- Developed automated testing framework for API endpoints
+- Created performance monitoring dashboard saving company $50K annually
+- Open source contributor to React ecosystem libraries
+
+ADDITIONAL INFORMATION
+- Strong problem-solving and communication skills
+- Experience with Agile methodologies and Scrum
+- Proficient in Docker and containerization
+- Experience with cloud platforms (AWS, GCP)
