@@ -1,4 +1,5 @@
-import pdfParse from "pdf-parse/lib/pdf-parse.js";
+// @ts-ignore - pdf-parse has type issues with ESM
+import pdfParse from "pdf-parse";
 
 export interface DocumentChunk {
   text: string;
@@ -9,7 +10,8 @@ export interface DocumentChunk {
 export async function extractTextFromPDF(
   fileBuffer: Buffer
 ): Promise<string> {
-  const data = await pdfParse.default(fileBuffer);
+  // pdf-parse exports a function directly
+  const data = await (pdfParse as any)(fileBuffer);
   return data.text;
 }
 
