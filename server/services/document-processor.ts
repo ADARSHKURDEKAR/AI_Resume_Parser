@@ -1,4 +1,4 @@
-import * as pdfParse from "pdf-parse";
+import pdfParse from "pdf-parse/lib/pdf-parse.js";
 
 export interface DocumentChunk {
   text: string;
@@ -9,7 +9,7 @@ export interface DocumentChunk {
 export async function extractTextFromPDF(
   fileBuffer: Buffer
 ): Promise<string> {
-  const data = await pdfParse(fileBuffer);
+  const data = await pdfParse.default(fileBuffer);
   return data.text;
 }
 
