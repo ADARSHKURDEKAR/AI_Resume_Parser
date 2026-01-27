@@ -1,0 +1,70 @@
+JOB DESCRIPTION
+Senior Full-Stack Engineer
+
+Company: InnovateTech Solutions
+Location: San Francisco, CA (Remote available)
+Employment Type: Full-time
+Salary Range: $150,000 - $180,000
+
+ABOUT THE ROLE
+We are seeking a talented Senior Full-Stack Engineer to join our engineering team. You will work on cutting-edge web applications, leading technical initiatives, and mentoring junior engineers. This is an excellent opportunity to make a significant impact on our product and company culture.
+
+KEY RESPONSIBILITIES
+- Design and develop scalable web applications using React and Node.js
+- Architect backend services and APIs using microservices patterns
+- Optimize application performance and user experience
+- Lead code reviews and maintain code quality standards
+- Collaborate with product managers and designers to implement features
+- Mentor junior developers and conduct technical interviews
+- Participate in system design discussions and technical planning
+- Implement and maintain CI/CD pipelines
+- Work with cloud infrastructure (AWS/GCP)
+
+REQUIRED QUALIFICATIONS
+- 5+ years of professional software development experience
+- Strong proficiency in JavaScript/TypeScript
+- Expert-level knowledge of React.js
+- Strong backend experience with Node.js and Express
+- Experience with relational databases (PostgreSQL) and NoSQL databases (MongoDB)
+- Understanding of REST API design principles
+- Experience with version control systems (Git)
+- Bachelor's degree in Computer Science or related field
+- Excellent communication and teamwork skills
+- Strong problem-solving abilities
+
+PREFERRED QUALIFICATIONS
+- Experience with Docker and containerization
+- AWS or GCP cloud platform experience
+- Experience with Kubernetes
+- Open source contributions
+- AWS Solutions Architect certification
+- Experience with GraphQL
+- Knowledge of testing frameworks (Jest, React Testing Library)
+- Experience with microservices architecture
+- Experience with CI/CD tools (GitHub Actions, Jenkins)
+
+TECHNICAL SKILLS REQUIRED
+- Frontend: React, Redux, CSS, HTML, responsive design
+- Backend: Node.js, Express, RESTful APIs
+- Databases: PostgreSQL, MongoDB
+- DevOps: Docker, CI/CD pipelines
+- Tools: Git, npm/yarn, VS Code
+
+NICE TO HAVE
+- Experience with real-time applications (WebSockets)
+- Performance optimization expertise
+- Database optimization skills
+- Security best practices knowledge
+- Agile/Scrum experience
+
+WHAT WE OFFER
+- Competitive salary and equity
+- Comprehensive health benefits
+- Professional development opportunities
+- Remote work flexibility
+- Collaborative work environment
+- Opportunity to work on challenging technical problems
+- Career growth and advancement opportunities
+
+ABOUT US
+InnovateTech Solutions is a rapidly growing technology company focused on building innovative solutions for enterprise clients. We value technical excellence, continuous learning, and collaborative teamwork.
