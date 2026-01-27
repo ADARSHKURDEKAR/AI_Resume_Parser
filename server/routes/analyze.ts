@@ -28,7 +28,7 @@ export const handleAnalyze: RequestHandler = async (req, res) => {
       resumeFile.buffer,
       resumeFile.mimetype,
       jobDescFile.buffer,
-      jobDescFile.mimetype
+      jobDescFile.mimetype,
     );
 
     res.json({

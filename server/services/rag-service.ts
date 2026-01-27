@@ -28,7 +28,7 @@ export async function analyzeResume(
   resumeBuffer: Buffer,
   resumeMimeType: string,
   jobDescBuffer: Buffer,
-  jobDescMimeType: string
+  jobDescMimeType: string,
 ): Promise<AnalysisResult> {
   // Extract text from files
   const resumeText = await extractTextFromFile(resumeBuffer, resumeMimeType);
@@ -70,7 +70,7 @@ export function getAnalysis(id: string): AnalysisResult | null {
 // RAG-based Q&A
 export async function askQuestion(
   id: string,
-  question: string
+  question: string,
 ): Promise<string> {
   const analysis = getAnalysis(id);
   if (!analysis) {
@@ -95,7 +95,7 @@ export async function askQuestion(
     question,
     relevantChunks,
     analysis.resumeText,
-    analysis.jobDescriptionText
+    analysis.jobDescriptionText,
   );
 
   // Store in conversation history
@@ -108,7 +108,7 @@ export async function askQuestion(
 // Calculate match score and analysis
 function calculateMatch(
   resumeText: string,
-  jobDescText: string
+  jobDescText: string,
 ): {
   score: number;
   strengths: string[];
@@ -185,7 +185,7 @@ function generateAnswer(
   question: string,
   relevantChunks: string[],
   resumeText: string,
-  jobDescText: string
+  jobDescText: string,
 ): string {
   const context = relevantChunks.join("\n");
   const lowerQuestion = question.toLowerCase();
@@ -198,7 +198,7 @@ function generateAnswer(
   ) {
     if (resumeText.toLowerCase().includes("degree")) {
       const degreeMatch = resumeText.match(
-        /(?:bs|ba|ms|ma|phd|bachelor|master|degree)\s+(?:in|of)?\s+[^.\n]+/i
+        /(?:bs|ba|ms|ma|phd|bachelor|master|degree)\s+(?:in|of)?\s+[^.\n]+/i,
       );
       if (degreeMatch) {
         return `Yes, the candidate has education credentials. Specifically: "${degreeMatch[0].trim()}".`;

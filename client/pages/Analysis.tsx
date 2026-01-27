@@ -66,7 +66,10 @@ export default function Analysis() {
 
       if (!response.ok) throw new Error("Failed to get response");
       const data = await response.json();
-      setMessages((prev) => [...prev, { role: "assistant", content: data.answer }]);
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: data.answer },
+      ]);
     } catch (error) {
       console.error("Error sending message:", error);
       setMessages((prev) => [
@@ -125,7 +128,9 @@ export default function Analysis() {
               <ArrowLeft className="w-5 h-5 text-slate-600" />
               <span className="text-slate-600">Back</span>
             </Link>
-            <h1 className="text-2xl font-bold text-slate-900">Analysis Results</h1>
+            <h1 className="text-2xl font-bold text-slate-900">
+              Analysis Results
+            </h1>
             <div className="w-16"></div>
           </div>
         </div>
@@ -209,7 +214,9 @@ export default function Analysis() {
                       key={i}
                       className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg border border-orange-200"
                     >
-                      <span className="text-orange-600 font-bold mt-0.5">•</span>
+                      <span className="text-orange-600 font-bold mt-0.5">
+                        •
+                      </span>
                       <span className="text-slate-700">{gap}</span>
                     </li>
                   ))}

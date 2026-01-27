@@ -5,13 +5,15 @@ import { FileUp, Loader2 } from "lucide-react";
 
 export default function Index() {
   const [resumeFile, setResumeFile] = useState<File | null>(null);
-  const [jobDescriptionFile, setJobDescriptionFile] = useState<File | null>(null);
+  const [jobDescriptionFile, setJobDescriptionFile] = useState<File | null>(
+    null,
+  );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const handleFileSelect = (
     e: React.ChangeEvent<HTMLInputElement>,
-    type: "resume" | "jd"
+    type: "resume" | "jd",
   ) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -58,7 +60,7 @@ export default function Index() {
       window.location.href = `/analysis/${data.id}`;
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "An error occurred during upload"
+        err instanceof Error ? err.message : "An error occurred during upload",
       );
       setLoading(false);
     }
@@ -132,7 +134,9 @@ export default function Index() {
                   <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-bold">
                     ✓
                   </div>
-                  <span className="text-sm text-slate-700">{resumeFile.name}</span>
+                  <span className="text-sm text-slate-700">
+                    {resumeFile.name}
+                  </span>
                 </div>
               )}
             </div>
@@ -212,7 +216,8 @@ export default function Index() {
             </div>
             <h3 className="font-semibold text-slate-900 mb-2">Match Score</h3>
             <p className="text-sm text-slate-600">
-              Get an instant match percentage between resume and job requirements
+              Get an instant match percentage between resume and job
+              requirements
             </p>
           </div>
 
@@ -232,7 +237,8 @@ export default function Index() {
             </div>
             <h3 className="font-semibold text-slate-900 mb-2">AI Chat</h3>
             <p className="text-sm text-slate-600">
-              Ask follow-up questions about the candidate with RAG-powered answers
+              Ask follow-up questions about the candidate with RAG-powered
+              answers
             </p>
           </div>
         </div>

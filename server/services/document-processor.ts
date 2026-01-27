@@ -7,9 +7,7 @@ export interface DocumentChunk {
   section?: string;
 }
 
-export async function extractTextFromPDF(
-  fileBuffer: Buffer
-): Promise<string> {
+export async function extractTextFromPDF(fileBuffer: Buffer): Promise<string> {
   // pdf-parse exports a function directly
   const data = await (pdfParse as any)(fileBuffer);
   return data.text;
@@ -21,7 +19,7 @@ export function extractTextFromTxt(fileBuffer: Buffer): string {
 
 export async function extractTextFromFile(
   fileBuffer: Buffer,
-  mimeType: string
+  mimeType: string,
 ): Promise<string> {
   if (mimeType === "application/pdf") {
     return extractTextFromPDF(fileBuffer);
@@ -61,7 +59,7 @@ export function simpleEmbedding(text: string): number[] {
   for (const word of words) {
     let hash = 0;
     for (let i = 0; i < word.length; i++) {
-      hash = ((hash << 5) - hash) + word.charCodeAt(i);
+      hash = (hash << 5) - hash + word.charCodeAt(i);
       hash = hash & hash;
     }
     const index = Math.abs(hash) % 100;

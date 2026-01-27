@@ -5,6 +5,7 @@ An AI-powered resume screening tool that uses Retrieval-Augmented Generation (RA
 ## Overview
 
 This application enables recruiters and hiring managers to:
+
 1. Upload a resume (PDF or TXT)
 2. Upload a job description (PDF or TXT)
 3. Get an instant match score (0-100%)
@@ -14,6 +15,7 @@ This application enables recruiters and hiring managers to:
 ## Tech Stack
 
 ### Frontend
+
 - **React 18** - UI framework
 - **React Router 6** - Routing
 - **TypeScript** - Type safety
@@ -22,6 +24,7 @@ This application enables recruiters and hiring managers to:
 - **Lucide React** - Icons
 
 ### Backend
+
 - **Node.js** - Runtime
 - **Express** - Web framework
 - **TypeScript** - Type safety
@@ -29,6 +32,7 @@ This application enables recruiters and hiring managers to:
 - **Multer** - File upload handling
 
 ### RAG & Storage
+
 - **Simple Embeddings** - TF-IDF based embeddings
 - **In-Memory Vector Store** - Fast local storage
 - **Cosine Similarity** - Vector similarity search
@@ -73,33 +77,40 @@ This application enables recruiters and hiring managers to:
 ## Installation
 
 ### Prerequisites
+
 - Node.js 18+
 - pnpm (recommended) or npm
 
 ### Setup
 
 1. **Install dependencies:**
+
    ```bash
    pnpm install
    ```
 
 2. **Start development server:**
+
    ```bash
    pnpm dev
    ```
+
    The app will be available at `http://localhost:5173`
 
 3. **Type checking:**
+
    ```bash
    pnpm typecheck
    ```
 
 4. **Run tests:**
+
    ```bash
    pnpm test
    ```
 
 5. **Build for production:**
+
    ```bash
    pnpm build
    ```
@@ -112,9 +123,11 @@ This application enables recruiters and hiring managers to:
 ## API Documentation
 
 ### 1. Upload & Analyze Resume
+
 **Endpoint:** `POST /api/analyze`
 
 **Request:**
+
 ```
 Form Data:
 - resume: File (PDF or TXT)
@@ -122,6 +135,7 @@ Form Data:
 ```
 
 **Response:**
+
 ```json
 {
   "id": "abc12345",
@@ -130,18 +144,17 @@ Form Data:
     "5 years React/Node.js experience",
     "Strong backend architecture skills"
   ],
-  "gaps": [
-    "No Kubernetes experience",
-    "Limited AWS exposure"
-  ],
+  "gaps": ["No Kubernetes experience", "Limited AWS exposure"],
   "assessment": "This candidate is an excellent match..."
 }
 ```
 
 ### 2. Get Analysis Results
+
 **Endpoint:** `GET /api/analysis/:id`
 
 **Response:**
+
 ```json
 {
   "id": "abc12345",
@@ -153,9 +166,11 @@ Form Data:
 ```
 
 ### 3. Ask a Question (RAG Chat)
+
 **Endpoint:** `POST /api/chat/:id`
 
 **Request:**
+
 ```json
 {
   "question": "Does this candidate have experience with React?"
@@ -163,6 +178,7 @@ Form Data:
 ```
 
 **Response:**
+
 ```json
 {
   "answer": "Yes, the candidate has 5 years of React experience...",
@@ -173,6 +189,7 @@ Form Data:
 ## How RAG Works in This Application
 
 ### Overview
+
 Retrieval-Augmented Generation combines document retrieval with language understanding to provide accurate, context-aware answers about resumes.
 
 ### Process Flow
@@ -208,6 +225,7 @@ Retrieval-Augmented Generation combines document retrieval with language underst
 **Question:** "Does this candidate have a degree from a state university?"
 
 **RAG Process:**
+
 1. Convert question to embedding
 2. Search for matching chunks about education
 3. Retrieve: "Bachelor of Science in Computer Science from State University"
@@ -216,17 +234,20 @@ Retrieval-Augmented Generation combines document retrieval with language underst
 ## Features
 
 ### Match Analysis
+
 - **Match Score**: Percentage based on skill/experience alignment
 - **Strengths**: Key qualifications matching job requirements
 - **Gaps**: Missing skills or experience
 - **Assessment**: Overall candidate evaluation
 
 ### Intelligent Chat
+
 - **RAG-Powered**: Answers based on actual resume content
 - **Context-Aware**: Maintains conversation history
 - **Multi-Turn**: Support for follow-up questions
 
 ### Supported File Formats
+
 - PDF (.pdf)
 - Plain Text (.txt)
 
@@ -235,10 +256,12 @@ Retrieval-Augmented Generation combines document retrieval with language underst
 Test the application with included sample files:
 
 ### Sample 1: Software Engineer
+
 - **Resume:** `samples/sample-resume-1.txt`
 - **Job Description:** `samples/sample-jd-1.txt`
 
 ### Sample 2: Product Designer
+
 - **Resume:** `samples/sample-resume-2.txt`
 - **Job Description:** `samples/sample-jd-2.txt`
 
@@ -268,6 +291,7 @@ Test the application with included sample files:
 ## Architecture Overview
 
 ### Frontend Flow
+
 ```
 Upload Page (Index.tsx)
     ↓
@@ -287,6 +311,7 @@ POST /api/chat/:id
 ```
 
 ### Backend Flow
+
 ```
 File Upload
     ↓
@@ -318,11 +343,13 @@ Response
 ## Performance Considerations
 
 ### Current Implementation
+
 - **In-Memory Storage**: Fast retrieval, no database overhead
 - **Simple Embeddings**: Efficient computation using TF-IDF
 - **Cosine Similarity**: O(1) lookup time per comparison
 
 ### For Production
+
 - Consider using:
   - **OpenAI Embeddings** for better semantic understanding
   - **Pinecone/Qdrant** for scalable vector storage
@@ -355,12 +382,14 @@ Response
 ## Deployment
 
 ### Netlify/Vercel
+
 1. Connect your GitHub repository
 2. Set build command: `pnpm build`
 3. Set output directory: `dist`
 4. Deploy automatically on push
 
 ### Docker
+
 ```dockerfile
 FROM node:18-alpine
 WORKDIR /app
@@ -370,6 +399,7 @@ CMD ["pnpm", "start"]
 ```
 
 ### Environment Variables
+
 ```
 VITE_API_URL=https://your-api.com
 ```
@@ -393,6 +423,7 @@ For issues, questions, or suggestions, please open an issue on GitHub.
 ## Changelog
 
 ### v1.0.0 (Initial Release)
+
 - Upload and analyze resumes
 - Match score calculation
 - Strengths and gaps identification
