@@ -1,3 +1,5 @@
+#Demo Video
+https://github.com/user-attachments/assets/6aac32b0-1f4c-4f35-8e42-6e7ab8195b9d
 # Resume Screening with RAG
 
 An AI-powered resume screening tool that uses Retrieval-Augmented Generation (RAG) to analyze resumes against job descriptions and provide intelligent Q&A about candidates.
